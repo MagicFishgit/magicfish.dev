@@ -6,6 +6,10 @@ views = Blueprint('views', __name__)
 def base():
     return render_template("base.html")
 
+@views.route('/about')
+def about():
+    return render_template("about.html")
+
 @views.route('/projects')
 def projects():
     return render_template("projects.html")
