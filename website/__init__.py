@@ -1,5 +1,7 @@
 import imp
 from flask import Flask
+from flask_mail import Mail, Message
+from mailconfig import mail_username, mail_password
 
 def create_app():
     app = Flask(__name__)
