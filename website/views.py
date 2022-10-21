@@ -45,7 +45,7 @@ def contact():
         phone = request.form.get('phoneNumber')
         message = request.form.get('message')
 
-        msg = Message(subject=f"Contact request from {firstName} {lastName}", body=f"Email: {email} \nPhone: {phone} \n\n\n Message: {message}", sender=mail_username, recipients=['rudivisagie@icloud.com', 'jolenespangenberg23@gmail.com'])
+        msg = Message(subject=f"Contact request from {firstName} {lastName}", body=f"Email: {email} \nPhone: {phone} \n\n\n Message: {message}", sender=mail_username, recipients=['rudivisagie@icloud.com'])
         mail.send(msg)
         return render_template("contact.html", success=True)
 
