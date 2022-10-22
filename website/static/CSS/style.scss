@@ -382,7 +382,7 @@ a, a:hover {
       overflow:auto; 
     }
     
-    .video-background-holder video {
+    .background-content {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -395,14 +395,10 @@ a, a:hover {
       -moz-transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
-    }
-    
-    .video-background-content {
-      position: relative;
       z-index: 2;
     }
     
-    .video-background-overlay {
+    .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -425,4 +421,8 @@ a, a:hover {
   
     div h1 {
       color: white;
+    }
+
+    body{
+      background-color: black;
     }
