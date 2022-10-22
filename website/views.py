@@ -1,9 +1,8 @@
 from distutils.debug import DEBUG
 from email import message
-from flask import Flask
 from mimetypes import init
-from sre_constants import SUCCESS
-from flask import Blueprint, render_template, request
+from nis import cat
+from flask import Flask,Blueprint, render_template, request, flash
 from flask_mail import Mail, Message
 from mailconfig import mail_username, mail_password
 
@@ -46,6 +45,7 @@ def contact():
 
         msg = Message(subject=f"Contact request from {firstName} {lastName}", body=f"Email: {email} \nPhone: {phone} \n\n\n Message: {message}", sender=mail_username, recipients=['rudivisagie@icloud.com'])
         mail.send(msg)
+        flash("Message sent successfully", category="success")
         return render_template("contact.html")
 
 
