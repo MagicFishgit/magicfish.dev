@@ -45,7 +45,7 @@ def contact():
 
         msg = Message(subject=f"Contact request from {firstName} {lastName}", body=f"Email: {email} \nPhone: {phone} \n\n\n Message: {message}", sender=mail_username, recipients=['rudivisagie@icloud.com'])
         mail.send(msg)
-        flash("Message sent successfully", category="success")
+        flash("Message sent successfully!", category="success")
         return render_template("contact.html")
 
 
