@@ -8,28 +8,6 @@
     <link href="../static/custom.css" rel="stylesheet" />
   </head>
   <body>
-    <!--Navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg bg-transparent navbar-dark ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img src="../static/fish.png" width="150" alt="" ></img></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active text-white" style="font-family: Cedarville, Fallback, sans-serif; font-size: 1.8rem;" aria-current="page" href="/about">About</a>
-              <li class="nav-item">
-                <a class="nav-link text-white" style="font-family: Cedarville, Fallback, sans-serif; font-size: 1.8rem;" href="/projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" style="font-family: Cedarville, Fallback, sans-serif; font-size: 1.8rem;" href="contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!--End-->
 
       <!--Background Video-->
       <div class="video-background-holder">
@@ -37,6 +15,54 @@
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
           <source src="../static/video.mp4" type="video/mp4">
         </video>
+       
+        <!--Navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg bg-transparent navbar-dark ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="../static/fish.png" width="150" alt="" ></img></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" style="font-family: Cedarville, Fallback, sans-serif; font-size: 1.8rem;" aria-current="page" href="/about">About</a>
+            <li class="nav-item">
+              <a class="nav-link text-white" style="font-family: Cedarville, Fallback, sans-serif; font-size: 1.8rem;" href="/projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" style="font-family: Cedarville, Fallback, sans-serif; font-size: 1.8rem;" href="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--End-->
+
+     <!--Message Flashing-->
+     {% with messages = get_flashed_messages(with_categories=true) %}
+     {% if messages %}
+       {% for category, message in messages %}
+       {% if category == "error" %}
+       <div class="alert alert-danger alter-dismissable fade show fixed-bottom" role="alert">
+         {{message}}
+         <button type="button" class="close" data-bs-dismiss="alert">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       {% else %}
+       <div class="alert alert-success alter-dismissable fade show fixed-bottom" role="alert">
+         {{message}}
+         <button type="button" class="btn-close" data-bs-dismiss="alert">
+         </button>
+       </div>
+       {% endif %}
+       {% endfor %}
+     {% endif %}
+     {% endwith %}
+     <!--End-->
+
+        <!--Main Content replaceable by jinja-->
         {% block maincontent %}
         <div class="video-background-content container h-100">
           <div class="d-flex h-100 text-center align-items-center">
@@ -47,6 +73,7 @@
           </div>
         </div>
         {% endblock %}
+        <!--End-->
       </div>
       <!--End-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
