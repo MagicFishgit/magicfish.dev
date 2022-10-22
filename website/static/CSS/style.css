@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.video-background-holder video {
+.background-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,14 +21,10 @@
   height: auto;
   z-index: 0;
   transform: translateX(-50%) translateY(-50%);
-}
-
-.video-background-content {
-  position: relative;
   z-index: 2;
 }
 
-.video-background-overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -50,4 +46,8 @@ form div label {
 
 div h1 {
   color: white;
+}
+
+body {
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */
