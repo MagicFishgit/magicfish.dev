@@ -3,6 +3,10 @@
     src: url(../CedarvilleCursive-Regular.ttf) format('truetype');
   }
 
+body{
+    background: #110f16;
+}
+
   @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 $main-green: #79dd09 !default;
 $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
@@ -412,6 +416,45 @@ a, a:hover {
       color: white;
     }
 
-    body{
-      background: #110f16;
-    }
+.prof-background{
+  background: url('../images/aboutprofileback.png') no-repeat center center fixed;
+  width: 100vw;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.prof-background div img {
+  width: 20rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.prof-background div {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.prof-background h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-top: 5%;
+}
+
+.prof-background h2 {
+  color: #777;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.prof-background p {
+  font-size: 1.5rem;
+  color: #777;
+  padding-left: 20%;
+  padding-right: 20%;
+}
