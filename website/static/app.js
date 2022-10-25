@@ -76,3 +76,19 @@ container3d[2].addEventListener("mouseleave", (e) => {
     valuesImg[2].style.transform = "translateZ(0px)";
     description3d[2].style.transform = "translateZ(0px)";
   });
+
+//Slide on Scroll section:
+
+//Observes when user has element in view
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
