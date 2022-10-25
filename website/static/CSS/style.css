@@ -386,13 +386,13 @@ div h1 {
 }
 
 .container-3d {
-  padding: 30% 30% 30% 30%;
+  padding: 15% 15% 15% 15%;
   justify-content: center;
 }
 
 .card-3d {
   transform-style: preserve-3d;
-  min-height: 80vh;
+  min-height: 60vh;
   width: 25rem;
   border-radius: 30px;
   padding: 0rem 5rem;
@@ -401,18 +401,23 @@ div h1 {
 }
 
 .circle {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
   background: linear-gradient(to right, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75));
   position: absolute;
   border-radius: 50%;
   z-index: 1;
 }
 
+.info-3d {
+  perspective: 400px;
+}
+
 .info-3d h1 {
   font-size: 2.5rem;
   transition: all 0.75s ease-out;
   color: #18151f;
+  text-align: center;
 }
 
 .info-3d h3 {
@@ -421,6 +426,7 @@ div h1 {
   color: #585858;
   font-weight: lighter;
   transition: all 0.75s ease-out;
+  text-align: center;
 }
 
 .values {
