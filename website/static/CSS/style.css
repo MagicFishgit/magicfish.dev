@@ -3,10 +3,6 @@
   font-family: "Cedarville";
   src: url(../CedarvilleCursive-Regular.ttf) format("truetype");
 }
-body {
-  background: #110f16;
-}
-
 /* This pen */
 body {
   font-family: "Baloo 2", cursive;
@@ -14,6 +10,7 @@ body {
   color: #ffffff;
   text-rendering: optimizeLegibility;
   font-weight: initial;
+  background: #110f16;
 }
 
 .dark {
@@ -403,7 +400,7 @@ div h1 {
 .circle {
   width: 12rem;
   height: 12rem;
-  background: linear-gradient(to right, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75));
+  background: linear-gradient(to right, rgba(22, 11, 26, 0.75), rgba(78, 16, 30, 0.75));
   position: absolute;
   border-radius: 50%;
   z-index: 1;
@@ -418,10 +415,11 @@ div h1 {
   transition: all 0.75s ease-out;
   color: #18151f;
   text-align: center;
+  font-family: Cedarville;
 }
 
 .info-3d h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 2rem 0rem;
   color: #585858;
   font-weight: lighter;
@@ -440,4 +438,10 @@ div h1 {
   width: 10rem;
   z-index: 2;
   transition: all 0.75s ease-out;
+}
+
+.values-heading {
+  font-weight: bolder;
+  font-size: 4rem;
+  padding-top: 5rem;
 }/*# sourceMappingURL=style.css.map */
