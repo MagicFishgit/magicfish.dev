@@ -20,6 +20,7 @@ body {
 	color: #ffffff;
 	text-rendering: optimizeLegibility;
 	font-weight: initial;
+  background: #110f16;
 }
 
 .dark {
@@ -412,6 +413,189 @@ a, a:hover {
       color: white;
     }
 
-    body{
-      background: #110f16;
-    }
+.prof-background{
+  background: url('../images/aboutprofileback.png') no-repeat center center fixed;
+  width: 100vw;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.prof-background div img {
+  width: 20rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.prof-background div {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.prof-background h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-top: 5%;
+}
+
+.prof-background h2 {
+  color: #777;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.prof-background p {
+  font-size: 1.5rem;
+  color: #777;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.container-3d{
+  padding: 15% 15% 15% 15%;
+  justify-content: center;
+}
+
+.card-3d{
+  transform-style: preserve-3d;
+  min-height: 60vh;
+  width: 25rem;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2), 0px 0px 50px rgba(255, 255, 255, 0.2);
+  background-color: #ffffff
+}
+
+.circle {
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(
+    to right,
+    rgba(22, 11, 26, 0.75),
+    rgba(78, 16, 30, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.info-3d {
+  perspective: 400px;
+}
+
+.info-3d h1 {
+  font-size: 2.5rem;
+  transition: all 0.75s ease-out;
+  color: #18151f;
+  text-align: center;
+  font-family: Cedarville;
+}
+.info-3d h3 {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+  text-align: center;
+}
+
+.values {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.values img {
+  width: 10rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+
+.values-heading {
+  font-weight: bolder;
+  font-size: 4rem;
+  padding-top: 5rem;
+}
+
+/*Classes for Section slide in animations. Mainly About.html*/
+
+section {
+  min-height: 100vh;
+  display: grid;;
+  place-items: center;
+  align-content: center;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+.logo img {
+  width: 10rem;
+}
+
+.cert-cards img {
+  width: 20rem;
+}
+
+.logos p {
+  padding-top: 2rem;
+}
+
+.logo:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.logo:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.logo:nth-child(4){
+  transition-delay: 600ms;
+}
+
+.logo:nth-child(5){
+  transition-delay: 800ms;
+}
+
+.logo:nth-child(6){
+  transition-delay: 1000ms;
+}
+
+.logo:nth-child(7){
+  transition-delay: 1200ms;
+}
+
+.logo:nth-child(8){
+  transition-delay: 1400ms;
+}
+
+.logo:nth-child(9){
+  transition-delay: 1600ms;
+}
+
+.logo:nth-child(10){
+  transition-delay: 1800ms;
+}
+
+.logo:nth-child(11){
+  transition-delay: 600ms;
+}
+
+.logo:nth-child(12){
+  transition-delay: 600ms;
+}
