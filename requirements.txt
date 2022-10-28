@@ -1,4 +1,4 @@
 flask
 flask-login
 flask-sqlalchemy
-flask-mail == 0.90.0
+flask-mail==0.90.0
